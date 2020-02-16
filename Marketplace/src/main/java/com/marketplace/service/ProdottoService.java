@@ -17,5 +17,7 @@ public interface ProdottoService {
 	public void addProdotto(Prodotto prodotto);
 	public void deleteProdottoById(Integer id);
 	public String provaUpload(@RequestPart ("productImage") MultipartFile image, HttpServletRequest request, Prodotto prodotto);
+	public List<Prodotto> filterProdottoByCategory(String category);
 	
+	public List<Prodotto> filtraByInput(String input);
 }

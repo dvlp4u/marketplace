@@ -16,6 +16,14 @@
 	    <form:label path="costo">Costo</form:label>
 	    <form:input path="costo" class="form-control" id="costo" placeholder="Inserisci il prezzo"/>
 	  </div>
+	  <div class="form-group">
+	    <form:label path="descrizione">Descrizione</form:label>
+	    <form:input path="descrizione" class="form-control" id="descrizione" placeholder="Inserisci la descrizione"/>
+	  </div>
+	  <div class="form-group">
+	    <form:label path="categoria">Categoria</form:label>
+	    <form:input path="categoria" class="form-control" id="categoria" placeholder="Inserisci la categoria"/>
+	  </div>
      <label for="image">Immagine</label>
   	 <input name="image" id=image type="file"/>
 	  <form:button type="submit" class="btn btn-secondary" value="submit" >Aggiungi Prodotto</form:button>

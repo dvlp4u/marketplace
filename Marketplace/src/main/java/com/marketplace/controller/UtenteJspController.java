@@ -26,7 +26,6 @@ public class UtenteJspController {
 	model.addAttribute("mode", "utenti");
 	model.addAttribute("users", utenteService.getUtenti());
 	model.addAttribute("title", "Lista Utenti");
-	
 	return "index";
 	}
 	

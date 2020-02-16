@@ -6,8 +6,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.springframework.web.multipart.MultipartFile;
-
 
 @Entity
 @Table(name = "prodotto")
@@ -24,7 +22,11 @@ public class Prodotto {
 	@Column(name = "costo", nullable = false)
 	private Integer costo;
 	
-//	private MultipartFile productImage;
+	@Column(name = "descrizione")
+	private String descrizione;
+	
+	@Column(name = "categoria", nullable = false)
+	private String categoria;
 	
 	public Prodotto() {
 		super();
@@ -54,11 +56,20 @@ public class Prodotto {
 		this.costo = costo;
 	}
 
-	/*
-	 * public MultipartFile getProductImage() { return productImage; }
-	 * 
-	 * public void setProductImage(MultipartFile productImage) { this.productImage =
-	 * productImage; }
-	 */
+	public String getDescrizione() {
+		return descrizione;
+	}
+
+	public void setDescrizione(String descrizione) {
+		this.descrizione = descrizione;
+	}
+
+	public String getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
+	}
 	
 }
