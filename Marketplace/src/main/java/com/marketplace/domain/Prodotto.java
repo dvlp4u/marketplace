@@ -29,7 +29,6 @@ public class Prodotto {
 	private String categoria;
 	
 	public Prodotto() {
-		super();
 	}
 
 	public Integer getId() {
