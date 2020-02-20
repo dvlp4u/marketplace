@@ -68,8 +68,8 @@ public class ProdottoJspController {
 	public String addUtente(@ModelAttribute("prodotto") Prodotto prodotto, Model model, HttpServletRequest request, @RequestPart("image") MultipartFile image) {
 		prodottoService.provaUpload(image, request, prodotto);
 		prodottoService.addProdotto(prodotto);
-		model.addAttribute("messaggio", "prodotto aggiunto con successo");
-		return "forward:/jsp/prodotti"; 
+//		model.addAttribute("messaggio", "prodotto aggiunto con successo");
+		return "redirect:/jsp/prodotti"; 
 	}
 	
 	@RequestMapping("/delete/deleteProdotto/{id}")
@@ -77,7 +77,7 @@ public class ProdottoJspController {
 		prodottoService.deleteProdottoById(id);
 		model.addAttribute("mode", "prodotti");
 		model.addAttribute("messaggio", "prodotto cancellato con successo");
-		return "forward:/jsp/prodotti"; 
+		return "redirect:/jsp/prodotti"; 
 	}
 	
 }

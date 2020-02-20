@@ -33,7 +33,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 			.antMatchers("/","home","/jsp/prodotti/**").permitAll()
 			.and().logout()
      			.logoutUrl("/logout")
-     			.logoutSuccessUrl("/").permitAll()
+     			.logoutSuccessUrl("/")
 			.and().formLogin();		
 	}
 	

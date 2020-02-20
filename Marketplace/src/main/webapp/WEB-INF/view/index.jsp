@@ -31,9 +31,9 @@
 <div class="container-fluid">
 
 <div class="jumbotron">
-  <h1 class="display-4">${title}</h1>
-  
-  <a class="btn btn-secondary float-right" href="/logout">Logout</button></a>
+  		<a class="btn btn-secondary float-right" href="/logout">Logout</button></a>
+  		<a class="btn btn-secondary float-right mr-2" href="/login">Login</button></a>
+  <h1 class="display-4" >${title}</h1>
 </div>
 
 	<jsp:include page="/WEB-INF/view/navbar.jsp"/>	
