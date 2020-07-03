@@ -27,6 +27,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
+		http.cors();
 		http.authorizeRequests()
 			.antMatchers("/jsp/utenti/**","/jsp/add/**","/jsp/delete/**").hasRole("ADMIN")
 //			.antMatchers("/???").hasAnyRole("USER","ADMIN")

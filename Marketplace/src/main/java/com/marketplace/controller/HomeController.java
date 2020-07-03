@@ -20,4 +20,12 @@ public class HomeController {
 			model.addAttribute("mode", "home");
 			return "index";
 		}
+		
+		@RequestMapping(value= {"/home2"})
+		public String getHome2(Model model) {
+			model.addAttribute("prodotti", prodottoService.getProdotti());
+			model.addAttribute("title", "Marketplace");
+			model.addAttribute("mode", "home");
+			return "index";
+		}
 }
