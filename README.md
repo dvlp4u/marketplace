@@ -12,7 +12,7 @@ Sono stati utilizzati: linguaggio Java con JDK versione 12.0.1, SpringBoot e un 
 6 - Selezionare a cartella del progetto "Marketplace" precedentemente scaricato e dezippato; comparirà il file POM, selezionarlo e cliccare su finish. Attendere qualche minuto che l'operazione sia completata. 
 7 - Avviare MysqlWorckbench e creare una nuova istanza.
 8 - Andare nel file "application.properties" dentro la cartella "src/main/resources" e modificare i seguenti dati con quelli inseriti nell'istanza di mySql:
-     "spring.datasource.url", "spring.datasource.username", "spring.datasource.password"
+     "spring.datasource.url", "spring.datasource.username", "spring.datasource.password"; modificare inoltre la voce "spring.jpa.hibernate.ddl-auto" con il parametro CREATE per evitare di creare le tabelle manualmente. 
 7 -  Per avviare il progetto, dentro STS cliccare con il tasto destro sulla cartella dell'applicazione nel "package explorer"; selezionare "run as" -> "Spring boot App".
 8 - aprire il Browser all'indirizzo "localhost/8080" per utilizzare l'applicazione.
 
