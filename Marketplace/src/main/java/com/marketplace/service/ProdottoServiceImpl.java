@@ -1,11 +1,15 @@
 package com.marketplace.service;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import javax.persistence.Index;
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.jasper.tagplugins.jstl.core.ForEach;
+import org.hibernate.query.criteria.internal.expression.function.SubstringFunction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestPart;
@@ -50,5 +54,22 @@ public class ProdottoServiceImpl implements ProdottoService {
 			}
 		}
 		return "Upload eseguito";
+	}
+	
+	@Override
+	public List<Prodotto> filterProdottoByCategory(String category) {
+		return prodottoRepository.findByCategoria(category);
+	}
+
+	@Override
+	public List<Prodotto> filtraByInput(String input) {
+		List<Prodotto> prodottiFiltro = new ArrayList<Prodotto>();
+		List<Prodotto> prodotti = prodottoRepository.findAll();
+		for (Prodotto prodotto : prodotti) {
+			if (input.toUpperCase().equals(prodotto.getNome().toUpperCase().substring(0, input.length()))) {
+				prodottiFiltro.add(prodotto);
+			}
+		}
+		return prodottiFiltro;
 	}
 }

@@ -13,7 +13,7 @@
     
 	<c:forEach items="${prodotti}" var="prodotto" varStatus="i" begin="0" end="2">
 	  <div id="car_item${i.index}" class="carousel-item"> 	
-      	<img src="/img/${prodotto.nome}.jpg" class="d-block w-100" alt="...">
+      	<img src="view/image/${prodotto.nome}.jpg" class="d-block w-100" alt="...">
       </div>
     </c:forEach> 
 <!--    <script type="text/javascript"> document.getElementById("car_item0").className = "carousel-item active";</script> -->

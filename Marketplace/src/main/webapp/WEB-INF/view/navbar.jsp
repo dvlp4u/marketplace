@@ -26,9 +26,11 @@
           Prodotti
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="/jsp/prodotti">Lista 1</a>
-          <a class="dropdown-item" href="#">Categoria 2</a>
-          <a class="dropdown-item" href="#">Categoria 3</a>
+          <a class="dropdown-item" href="/jsp/prodotti">Lista completa</a>
+          <a class="dropdown-item" href="/jsp/prodotti/category/Laptop">Laptop</a>
+          <a class="dropdown-item" href="/jsp/prodotti/category/Smartphone">Smartphone</a>      
+		  <a class="dropdown-item" href="/jsp/prodotti/category/Tablet">Tablet</a>
+          <a class="dropdown-item" href="/jsp/prodotti/category/Varie">Varie</a>
         </div>
       </li>
     </ul>

@@ -5,10 +5,11 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
+
 	<div class="input-group mb-3 col-4 offset-7">
-	  <input type="text" class="form-control" style="min-width:100px" placeholder="Inserisci il nome da cercare" >
+	  <input id="filtro" type="text" class="form-control" style="min-width:100px" placeholder="Inserisci il nome da cercare" value="${memoria}" onkeyup="ricerca()" >
 	  <div class="input-group-append">
-	    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Cerca</button>
+	   <a id="cerca" href=""> <button class="btn btn-outline-secondary" type="button" id="button-addon2" >Cerca</button> </a>
 	  </div>
 	</div>
 	
@@ -17,33 +18,33 @@
 	  <div class="col mb-4">
 	    <div class="card">  
 	    <a href="/jsp/prodotti/${prodotto.id}">	
-	      <img src="/img/${prodotto.nome}.jpg" class="card-img-top" alt="..." style="height:200px;"/>
+	      <img src="/view/image/${prodotto.nome}.jpg" class="card-img-top" alt="..." style="height:200px;"/>
 	    </a>
 	      <div class="card-body">
 	        <h5 class="card-title"><a href="/jsp/prodotti/${prodotto.id}">${prodotto.nome}</a></h5>
 	        <p class="card-text">Il costo del prodotto è ${prodotto.costo}</p>
 	      </div>
-	     
+	      <a class="btn btn-primary" href="/jsp/delete/deleteProdotto/${prodotto.id}" role="button"><i class="fa fa-trash" aria-hidden="true"></i></a>     
 	   </div>
 	  </div>
 	</c:forEach>  
     </div>
  
-<c:if test="${prodotto.id != null}">
-    	<div class="row row-cols-1 row-cols-md-4">
-	  <div class="col mb-4">
-	    <div class="card">  	
-	      <img src="/img/${prodotto.id}.jpg" class="card-img-top" alt="...">
-	      <div class="card-body">
-	        <h5 class="card-title">${prodotto.nome}</h5>
-	        <p class="card-text">Il costo del prodotto è ${prodotto.costo}</p>
-	      </div>
-	   </div>
-	  </div>
-    </div>
-</c:if>
+<a class="btn btn-secondary" href="/jsp/add/addProdotto">Aggiungi Prodotto</button></a>
 
+ <script type="text/javascript">
 
-
-
-<a href="/jsp/add/addProdotto"><button  type="button" class="btn btn-secondary"  >Aggiungi Prodotto</button></a>
+	
+ ricerca = function(){
+if(event.keyCode === 13){
+	let filtro = $("#filtro").val(); 
+	if(filtro == ""){$(location).attr('href', "/jsp/prodotti/");
+	}else{$(location).attr('href', "/jsp/prodotti/filtro/"+filtro);}
+}else{
+ 	let filtro = $("#filtro").val(); 
+	if(filtro == ""){$("#cerca").attr('href', "/jsp/prodotti/");
+	}else{$("#cerca").attr('href', "/jsp/prodotti/filtro/"+filtro);}
+}
+}
+ 
+ </script>

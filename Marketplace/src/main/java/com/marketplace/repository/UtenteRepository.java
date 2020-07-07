@@ -8,4 +8,6 @@ import com.marketplace.domain.Utente;
 
 @Repository
 public interface UtenteRepository extends JpaRepository<Utente, Integer> {
+	
+
 }
