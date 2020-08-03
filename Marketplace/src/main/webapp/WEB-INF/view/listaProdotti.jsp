@@ -21,7 +21,7 @@
 	      <img src="/view/image/${prodotto.nome}.jpg" class="card-img-top" alt="..." style="height:200px;"/>
 	    </a>
 	      <div class="card-body">
-	        <h5 class="card-title"><a href="/jsp/prodotti/${prodotto.id}">${prodotto.nome}</a></h5>
+	        <h5 class="card-title"><a href="jsp/prodotti/${prodotto.id}">${prodotto.nome}</a></h5>
 	        <p class="card-text">Il costo del prodotto è ${prodotto.costo}</p>
 	      </div>
 	      <a class="btn btn-primary" href="/jsp/delete/deleteProdotto/${prodotto.id}" role="button"><i class="fa fa-trash" aria-hidden="true"></i></a>     
@@ -30,7 +30,7 @@
 	</c:forEach>  
     </div>
  
-<a class="btn btn-secondary" href="/jsp/add/addProdotto">Aggiungi Prodotto</button></a>
+<a class="btn btn-secondary" href="jsp/add/addProdotto">Aggiungi Prodotto</a>
 
  <script type="text/javascript">
 

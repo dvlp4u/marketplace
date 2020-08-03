@@ -13,10 +13,10 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/jsp/utenti">Utenti</a>
+        <a class="nav-link" href="jsp/utenti">Utenti</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Contatti</a>
@@ -26,11 +26,11 @@
           Prodotti
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="/jsp/prodotti">Lista completa</a>
-          <a class="dropdown-item" href="/jsp/prodotti/category/Laptop">Laptop</a>
-          <a class="dropdown-item" href="/jsp/prodotti/category/Smartphone">Smartphone</a>      
-		  <a class="dropdown-item" href="/jsp/prodotti/category/Tablet">Tablet</a>
-          <a class="dropdown-item" href="/jsp/prodotti/category/Varie">Varie</a>
+          <a class="dropdown-item" href="jsp/prodotti">Lista completa</a>
+          <a class="dropdown-item" href="jsp/prodotti/category/Laptop">Laptop</a>
+          <a class="dropdown-item" href="jsp/prodotti/category/Smartphone">Smartphone</a>      
+		  <a class="dropdown-item" href="jsp/prodotti/category/Tablet">Tablet</a>
+          <a class="dropdown-item" href="jsp/prodotti/category/Varie">Varie</a>
         </div>
       </li>
     </ul>
