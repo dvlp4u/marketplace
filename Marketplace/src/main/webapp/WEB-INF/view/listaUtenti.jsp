@@ -24,10 +24,10 @@
   <tbody>
   	<c:forEach items="${users}" var="user">
     <tr>
-      <th scope="row"><a href="jsp/utenti/${user.id}">${user.id}</a></th>
-      <td><a href="jsp/utenti/${user.id}">${user.nick}</a></td>
-      <td><a href="jsp/utenti/${user.id}">${user.password}</a></td>
-      <td><a href="jsp/utenti/${user.id}">${user.ruolo}</a></td>
+      <th scope="row"><a href="${pageContext.request.contextPath}/jsp/utenti/${user.id}">${user.id}</a></th>
+      <td><a href="${pageContext.request.contextPath}/jsp/utenti/${user.id}">${user.nick}</a></td>
+      <td><a href="${pageContext.request.contextPath}/jsp/utenti/${user.id}">${user.password}</a></td>
+      <td><a href="${pageContext.request.contextPath}/jsp/utenti/${user.id}">${user.ruolo}</a></td>
     </tr>
 	</c:forEach>
 	<tr>
@@ -39,4 +39,4 @@
   </tbody>
 </table>
 
-<a href="jsp/add/addUtente"><button type="button" class="btn btn-secondary"  >Aggiungi Utente</button></a>
+<a href="add/addUtente"><button type="button" class="btn btn-secondary"  >Aggiungi Utente</button></a>

@@ -11,4 +11,5 @@ import com.marketplace.domain.Prodotto;
 public interface ProdottoRepository extends JpaRepository<Prodotto, Integer> {
 
 	public List<Prodotto> findByCategoria(String category);
+	public Prodotto findById(int id);
 }

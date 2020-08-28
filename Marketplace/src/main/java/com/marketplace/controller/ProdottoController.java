@@ -1,5 +1,6 @@
 package com.marketplace.controller;
 
+import java.io.File;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,9 +27,7 @@ public class ProdottoController {
 	private ProdottoService prodottoService;
 	
 	@GetMapping("/prodotti")
-	public List<Prodotto> getProdotti(Model model){
-		return prodottoService.getProdotti();
-	}
+	public List<Prodotto> getProdotti(Model model){	return prodottoService.getProdotti();	}
 
 	@GetMapping("/prodotti/{id}")
 	public Optional<Prodotto> getProdottoById(@PathVariable Integer id) {

@@ -16,21 +16,22 @@
 	<div class="row row-cols-1 row-cols-md-4">
 	<c:forEach items="${prodotti}" var="prodotto">
 	  <div class="col mb-4">
-	    <div class="card">  
-	    <a href="/jsp/prodotti/${prodotto.id}">	
-	      <img src="/view/image/${prodotto.nome}.jpg" class="card-img-top" alt="..." style="height:200px;"/>
+	    <div class="card">
+
+	    <a href="${pageContext.request.contextPath}/jsp/prodotti/${prodotto.id}">
+	      <img src="/images/${prodotto.nome}.jpg" class="card-img-top" alt="..." style="height:200px;"/>
 	    </a>
 	      <div class="card-body">
-	        <h5 class="card-title"><a href="jsp/prodotti/${prodotto.id}">${prodotto.nome}</a></h5>
-	        <p class="card-text">Il costo del prodotto è ${prodotto.costo}</p>
+	        <h5 class="card-title"><a href="${pageContext.request.contextPath}jsp/prodotti/${prodotto.id}">${prodotto.nome}</a></h5>
+	        <p class="card-text">Il costo del prodotto ï¿½ ${prodotto.costo}</p>
 	      </div>
-	      <a class="btn btn-primary" href="/jsp/delete/deleteProdotto/${prodotto.id}" role="button"><i class="fa fa-trash" aria-hidden="true"></i></a>     
+	      <a class="btn btn-primary" href="delete/deleteProdotto/${prodotto.id}" role="button"><i class="fa fa-trash" aria-hidden="true"></i></a>
 	   </div>
 	  </div>
 	</c:forEach>  
     </div>
  
-<a class="btn btn-secondary" href="jsp/add/addProdotto">Aggiungi Prodotto</a>
+<a class="btn btn-secondary" href="add/addProdotto">Aggiungi Prodotto</a>
 
  <script type="text/javascript">
 

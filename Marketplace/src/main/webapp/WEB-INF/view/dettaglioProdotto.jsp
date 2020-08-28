@@ -8,13 +8,13 @@
     	<div class="row row-cols-1 row-cols-md-4">
 	  <div class="col mb-4">
 	    <div class="card">  	
-	      <img src="/img/${prodotto.nome}.jpg" class="card-img-top" alt="...">
+	      <img src="/imgages/${prodotto.nome}.jpg" class="card-img-top" alt="...">
 	      <div class="card-body">
 	        <h5 class="card-title">${prodotto.nome}</h5>
-	        <p class="card-text">Il costo del prodotto è ${prodotto.costo}</p>
+	        <p class="card-text">Il costo del prodotto ï¿½ ${prodotto.costo}</p>
 	      </div>
 	   </div>
 	  </div>
     </div>
 
-<a href="/jsp/prodotti"><button  type="button" class="btn btn-secondary">Indietro</button></a>
+<a href="${pageContext.request.contextPath}/jsp/prodotti"><button  type="button" class="btn btn-secondary">Indietro</button></a>

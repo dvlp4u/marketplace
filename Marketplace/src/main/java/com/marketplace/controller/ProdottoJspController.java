@@ -5,16 +5,14 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.marketplace.domain.Prodotto;
 import com.marketplace.service.ProdottoService;
+
+import java.io.Console;
+import java.io.File;
 
 @Controller
 @RequestMapping("/jsp")
@@ -24,10 +22,13 @@ public class ProdottoJspController {
 	private ProdottoService prodottoService;
 	
 	@GetMapping("/prodotti")
-	public String getProdotti(Model model){
+	public String getProdotti(Model model, HttpServletRequest request){
 		model.addAttribute("mode", "prodotti");
 		model.addAttribute("title", "Lista Prodotti");
 		model.addAttribute("prodotti", prodottoService.getProdotti());
+		System.out.println(request.getSession().getServletContext().getRealPath("/"));
+		System.out.println(request.getSession().getServletContext().getContextPath());
+		System.out.println(System.getProperty("jboss.server.home.url"));
 		return "index";
 	}
 	
@@ -77,7 +78,7 @@ public class ProdottoJspController {
 		prodottoService.deleteProdottoById(id);
 		model.addAttribute("mode", "prodotti");
 		model.addAttribute("messaggio", "prodotto cancellato con successo");
-		return "redirect:/jsp/prodotti"; 
+		return "redirect:/jsp/prodotti";
 	}
 	
 }

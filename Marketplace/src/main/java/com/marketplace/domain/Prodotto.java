@@ -1,10 +1,6 @@
 package com.marketplace.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 
 @Entity
@@ -15,8 +11,8 @@ public class Prodotto {
 	@GeneratedValue
 	@Column(name = "id", nullable = false)
 	private Integer id;
-	
-	@Column(name = "nome", nullable = false)
+
+	@Column(name = "nome", nullable = false, unique = true)
 	private String nome;
 	
 	@Column(name = "costo", nullable = false)

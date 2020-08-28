@@ -20,4 +20,5 @@ public interface ProdottoService {
 	public List<Prodotto> filterProdottoByCategory(String category);
 	
 	public List<Prodotto> filtraByInput(String input);
+	public void cancellaImmagine(int prodottoId);
 }
